@@ -1,0 +1,2 @@
+2024-09-18 12:44:11 [EROR]<78> [HMSDbInterface.BpossCommonFunction] LoginId - , ErrorMessage -  - Bad Request<br> GetGrpWiseItemPrice(string ClinicId, string MCODE) - 61d91265753ea6e76a514a84, 118027
+2024-09-18 12:44:17 [EROR]<78> [HMSDbInterface.BpossCommonFunction] LoginId - , ErrorMessage -  - Bad Request<br> GetDateWiseItemPrice(string ClinicId, string MCODE) - 61d91265753ea6e76a514a84, 118027

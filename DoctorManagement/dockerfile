@@ -1,0 +1,18 @@
+# Use the official ASP.NET runtime image
+FROM mcr.microsoft.com/dotnet/aspnet:7.0
+
+# Set the working directory
+WORKDIR /app
+
+# Copy the pre-built application files
+COPY src/*  ./
+
+# Set environment variable to bind the app to all interfaces and port 5003
+ENV ASPNETCORE_URLS=http://+:5003
+
+# Expose the port the app runs on
+EXPOSE 5003
+
+# Set the entry point for the application
+ENTRYPOINT ["dotnet", "DoctorManagement.dll"]  # Change YourService.dll to your actual service name
+

@@ -1,0 +1,18 @@
+# Set the base image to the official .NET runtime
+FROM mcr.microsoft.com/dotnet/aspnet:7.0 AS runtime
+
+# Set the working directory
+WORKDIR /app
+
+# Copy the pre-built application files (all files from src/ recursively)
+COPY src/* ./
+
+# Set environment variable to bind the app to all interfaces and port 5001
+ENV ASPNETCORE_URLS=http://+:5001
+
+# Expose the port that the app will run on
+EXPOSE 5001
+
+# Set the entry point for the application
+ENTRYPOINT ["dotnet", "AdminManagement.dll"]
+

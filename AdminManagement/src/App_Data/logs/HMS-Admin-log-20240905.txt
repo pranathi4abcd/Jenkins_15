@@ -1,0 +1,41 @@
+2024-09-05 10:29:02 [EROR]<59> [HMSDbModel.ClsCommon] B-poss Authorization Failed
+2024-09-05 10:29:02 [EROR]<59> [HMSDbModel.ClsCommon] B-poss Authorization Failed
+2024-09-05 10:29:02 [EROR]<62> [HMSDbModel.ClsCommon] B-poss Authorization Failed
+2024-09-05 10:29:02 [EROR]<62> [HMSDbModel.ClsCommon] B-poss Authorization Failed
+2024-09-05 10:29:04 [EROR]<40> [HMSDbModel.ClsCommon] B-poss Authorization Failed
+2024-09-05 10:29:04 [EROR]<40> [HMSDbModel.ClsCommon] B-poss Authorization Failed
+2024-09-05 10:29:06 [EROR]<40> [HMSDbModel.ClsCommon] B-poss Authorization Failed
+2024-09-05 10:29:06 [EROR]<40> [HMSDbModel.ClsCommon] B-poss Authorization Failed
+2024-09-05 10:29:06 [EROR]<40> [HMSDbModel.ClsCommon] B-poss Authorization Failed
+2024-09-05 10:29:06 [EROR]<14> [HMSDbModel.ClsCommon] B-poss Authorization Failed
+2024-09-05 10:29:06 [EROR]<40> [HMSDbModel.ClsCommon] B-poss Authorization Failed
+2024-09-05 10:29:06 [EROR]<40> [HMSDbModel.ClsCommon] B-poss Authorization Failed
+2024-09-05 10:29:06 [EROR]<14> [HMSDbModel.ClsCommon] B-poss Authorization Failed
+2024-09-05 10:29:06 [EROR]<14> [HMSDbModel.ClsCommon] B-poss Authorization Failed
+2024-09-05 10:29:06 [EROR]<14> [HMSDbModel.ClsCommon] B-poss Authorization Failed
+2024-09-05 10:29:06 [EROR]<14> [HMSDbModel.ClsCommon] B-poss Authorization Failed
+2024-09-05 10:29:07 [EROR]<14> [HMSDbModel.ClsCommon] B-poss Authorization Failed
+2024-09-05 10:29:08 [EROR]<43> [HMSDbModel.ClsCommon] B-poss Authorization Failed
+2024-09-05 10:29:11 [EROR]<59> [HMSDbModel.ClsCommon] B-poss Authorization Failed
+2024-09-05 10:29:11 [EROR]<14> [HMSDbModel.ClsCommon] B-poss Authorization Failed
+2024-09-05 12:14:17 [EROR]<39> [HMSDbInterface.DbClinic] LoginId - , ErrorMessage - Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at HMSDbInterface.DbClinic.GetTreatmentScheduleForTherapy(String clinicId, String bookingtype, String filterBy, Nullable`1 dFrom, Nullable`1 dTo, Nullable`1 AdmDate, String gender, List`1 TimeId, List`1 HCategoryName, List`1 PatientConditions, String opdType, String IsExcel, String reportType)
+2024-09-05 12:15:41 [EROR]<39> [HMSDbInterface.DbClinic] LoginId - , ErrorMessage - Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at HMSDbInterface.DbClinic.GetTreatmentScheduleForTherapy(String clinicId, String bookingtype, String filterBy, Nullable`1 dFrom, Nullable`1 dTo, Nullable`1 AdmDate, String gender, List`1 TimeId, List`1 HCategoryName, List`1 PatientConditions, String opdType, String IsExcel, String reportType)
+2024-09-05 12:15:59 [EROR]<39> [HMSDbInterface.DbClinic] LoginId - , ErrorMessage - Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at HMSDbInterface.DbClinic.GetTreatmentScheduleForTherapy(String clinicId, String bookingtype, String filterBy, Nullable`1 dFrom, Nullable`1 dTo, Nullable`1 AdmDate, String gender, List`1 TimeId, List`1 HCategoryName, List`1 PatientConditions, String opdType, String IsExcel, String reportType)
+2024-09-05 12:29:35 [EROR]<29> [HMSDbInterface.DbClinic] LoginId - , ErrorMessage - Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at HMSDbInterface.DbClinic.GetTreatmentScheduleForTherapy(String clinicId, String bookingtype, String filterBy, Nullable`1 dFrom, Nullable`1 dTo, Nullable`1 AdmDate, String gender, List`1 TimeId, List`1 HCategoryName, List`1 PatientConditions, String opdType, String IsExcel, String reportType)
+2024-09-05 12:32:59 [INFO]<1> [] ====================================================================
+
+2024-09-05 12:32:59 [INFO]<1> [] ====================================================================
+2024-09-05 12:32:59 [INFO]<1> [] Application Starts. Version: 1.1.1.1
+2024-09-05 12:32:59 [INFO]<1> [] Application Directory: /usr/share/nginx/ALL/AdminManagement/

@@ -1,0 +1,27 @@
+2024-09-04 14:38:06 [EROR]<61> [HMSDbInterface.DbRoomMaster] LoginId - , ErrorMessage - 'null' is not a valid 24 digit hex string.
+System.FormatException: 'null' is not a valid 24 digit hex string.
+   at MongoDB.Bson.ObjectId.Parse(String s)
+   at MongoDB.Bson.Serialization.Serializers.StringSerializer.SerializeValue(BsonSerializationContext context, BsonSerializationArgs args, String value)
+   at MongoDB.Bson.Serialization.IBsonSerializerExtensions.Serialize(IBsonSerializer serializer, BsonSerializationContext context, Object value)
+   at MongoDB.Driver.Linq.Linq3Implementation.Misc.SerializationHelper.SerializeValue(IBsonSerializer serializer, Object value)
+   at MongoDB.Driver.Linq.Linq3Implementation.Translators.ExpressionToFilterTranslators.MethodTranslators.EqualsMethodToFilterTranslator.Translate(TranslationContext context, Expression expression, Expression expression1, Expression expression2)
+   at MongoDB.Driver.Linq.Linq3Implementation.Translators.ExpressionToFilterTranslators.MethodTranslators.EqualsMethodToFilterTranslator.Translate(TranslationContext context, MethodCallExpression expression)
+   at MongoDB.Driver.Linq.Linq3Implementation.Translators.ExpressionToFilterTranslators.MethodTranslators.MethodCallExpressionToFilterTranslator.Translate(TranslationContext context, MethodCallExpression expression)
+   at MongoDB.Driver.Linq.Linq3Implementation.Translators.ExpressionToFilterTranslators.ExpressionToFilterTranslator.TranslateUsingQueryOperators(TranslationContext context, Expression expression)
+   at MongoDB.Driver.Linq.Linq3Implementation.Translators.ExpressionToFilterTranslators.ExpressionToFilterTranslator.Translate(TranslationContext context, Expression expression, Boolean exprOk)
+   at MongoDB.Driver.Linq.Linq3Implementation.Translators.ExpressionToFilterTranslators.ExpressionToFilterTranslator.TranslateLambda(TranslationContext context, LambdaExpression lambdaExpression, IBsonSerializer parameterSerializer, Boolean asRoot)
+   at MongoDB.Driver.Linq.Linq3Implementation.LinqProviderAdapterV3.TranslateExpressionToFilter[TDocument](Expression`1 expression, IBsonSerializer`1 documentSerializer, IBsonSerializerRegistry serializerRegistry)
+   at MongoDB.Driver.MongoCollectionImpl`1.CreateFindOperation[TProjection](FilterDefinition`1 filter, FindOptions`2 options)
+   at MongoDB.Driver.MongoCollectionImpl`1.FindAsync[TProjection](IClientSessionHandle session, FilterDefinition`1 filter, FindOptions`2 options, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.UsingImplicitSessionAsync[TResult](Func`2 funcAsync, CancellationToken cancellationToken)
+   at HMSDbInterface.DbRoomMaster.GetRoomTypeMasterByClinic(String ClinicId)
+2024-09-04 16:38:38 [INFO]<1> [] ====================================================================
+
+2024-09-04 16:38:38 [INFO]<1> [] ====================================================================
+2024-09-04 16:38:38 [INFO]<1> [] Application Starts. Version: 1.0.0.0
+2024-09-04 16:38:38 [INFO]<1> [] Application Directory: /usr/share/nginx/ALL/UserManagement/
+2024-09-04 16:50:38 [INFO]<1> [] ====================================================================
+
+2024-09-04 16:50:38 [INFO]<1> [] ====================================================================
+2024-09-04 16:50:38 [INFO]<1> [] Application Starts. Version: 1.0.0.0
+2024-09-04 16:50:38 [INFO]<1> [] Application Directory: /usr/share/nginx/ALL/UserManagement/

@@ -1,0 +1,116 @@
+2024-09-03 09:38:32 [EROR]<58> [HMSDbInterface.BpossCommonFunction] LoginId - , ErrorMessage - 'undefined' is not a valid 24 digit hex string.
+System.FormatException: 'undefined' is not a valid 24 digit hex string.
+   at MongoDB.Bson.ObjectId.Parse(String s)
+   at MongoDB.Bson.Serialization.Serializers.StringSerializer.SerializeValue(BsonSerializationContext context, BsonSerializationArgs args, String value)
+   at MongoDB.Bson.Serialization.IBsonSerializerExtensions.Serialize(IBsonSerializer serializer, BsonSerializationContext context, Object value)
+   at MongoDB.Driver.Linq.Linq3Implementation.Misc.SerializationHelper.SerializeValue(IBsonSerializer serializer, Object value)
+   at MongoDB.Driver.Linq.Linq3Implementation.Translators.ExpressionToFilterTranslators.MethodTranslators.EqualsMethodToFilterTranslator.Translate(TranslationContext context, Expression expression, Expression expression1, Expression expression2)
+   at MongoDB.Driver.Linq.Linq3Implementation.Translators.ExpressionToFilterTranslators.MethodTranslators.EqualsMethodToFilterTranslator.Translate(TranslationContext context, MethodCallExpression expression)
+   at MongoDB.Driver.Linq.Linq3Implementation.Translators.ExpressionToFilterTranslators.MethodTranslators.MethodCallExpressionToFilterTranslator.Translate(TranslationContext context, MethodCallExpression expression)
+   at MongoDB.Driver.Linq.Linq3Implementation.Translators.ExpressionToFilterTranslators.ExpressionToFilterTranslator.TranslateUsingQueryOperators(TranslationContext context, Expression expression)
+   at MongoDB.Driver.Linq.Linq3Implementation.Translators.ExpressionToFilterTranslators.ExpressionToFilterTranslator.Translate(TranslationContext context, Expression expression, Boolean exprOk)
+   at MongoDB.Driver.Linq.Linq3Implementation.Translators.ExpressionToFilterTranslators.ExpressionToFilterTranslator.TranslateLambda(TranslationContext context, LambdaExpression lambdaExpression, IBsonSerializer parameterSerializer, Boolean asRoot)
+   at MongoDB.Driver.Linq.Linq3Implementation.LinqProviderAdapterV3.TranslateExpressionToFilter[TDocument](Expression`1 expression, IBsonSerializer`1 documentSerializer, IBsonSerializerRegistry serializerRegistry)
+   at MongoDB.Driver.MongoCollectionImpl`1.CreateFindOperation[TProjection](FilterDefinition`1 filter, FindOptions`2 options)
+   at MongoDB.Driver.MongoCollectionImpl`1.FindAsync[TProjection](IClientSessionHandle session, FilterDefinition`1 filter, FindOptions`2 options, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.UsingImplicitSessionAsync[TResult](Func`2 funcAsync, CancellationToken cancellationToken)
+   at HMSDbInterface.BpossCommonFunction.GetTIDetails(String slotBookingId, String VCHRNO)
+2024-09-03 11:19:36 [EROR]<36> [HMSDbInterface.BpossCommonFunction] LoginId - , ErrorMessage - Name or service not known (124736.pos.bharuwa.com:6007)
+System.Net.Http.HttpRequestException: Name or service not known (124736.pos.bharuwa.com:6007)
+ ---> System.Net.Sockets.SocketException (0xFFFDFFFF): Name or service not known
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.HttpConnectionWaiter`1.WaitForConnectionAsync(Boolean async, CancellationToken requestCancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at HMSDbInterface.BpossCommonFunction.GetCustomerInfo(String SlotBookingId)
+2024-09-03 11:19:36 [EROR]<36> [AdminManagement.Controllers.BPOSSyncController] LoginId - 626e21a73a05a6f1169f1f45, ErrorMessage - Name or service not known (124736.pos.bharuwa.com:6007)
+System.Exception: Name or service not known (124736.pos.bharuwa.com:6007)
+   at HMSDbInterface.BpossCommonFunction.GetCustomerInfo(String SlotBookingId)
+   at AdminManagement.Controllers.BPOSSyncController.GetCreditNoteBalAmount(String SlotBookingId, Boolean IsVisitor)
+2024-09-03 11:40:24 [EROR]<7> [HMSDbInterface.DbClinic] LoginId - , ErrorMessage - Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at HMSDbInterface.DbClinic.GetTreatmentScheduleForTherapy(String clinicId, String bookingtype, String filterBy, Nullable`1 dFrom, Nullable`1 dTo, Nullable`1 AdmDate, String gender, List`1 TimeId, List`1 HCategoryName, List`1 PatientConditions, String opdType, String IsExcel, String reportType)
+2024-09-03 11:41:01 [EROR]<37> [HMSDbInterface.DbClinic] LoginId - , ErrorMessage - Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at HMSDbInterface.DbClinic.GetTreatmentScheduleForTherapy(String clinicId, String bookingtype, String filterBy, Nullable`1 dFrom, Nullable`1 dTo, Nullable`1 AdmDate, String gender, List`1 TimeId, List`1 HCategoryName, List`1 PatientConditions, String opdType, String IsExcel, String reportType)
+2024-09-03 11:41:31 [EROR]<36> [HMSDbInterface.DbClinic] LoginId - , ErrorMessage - Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at HMSDbInterface.DbClinic.GetTreatmentScheduleForTherapy(String clinicId, String bookingtype, String filterBy, Nullable`1 dFrom, Nullable`1 dTo, Nullable`1 AdmDate, String gender, List`1 TimeId, List`1 HCategoryName, List`1 PatientConditions, String opdType, String IsExcel, String reportType)
+2024-09-03 11:42:28 [EROR]<12> [HMSDbInterface.DbClinic] LoginId - , ErrorMessage - Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at HMSDbInterface.DbClinic.GetTreatmentScheduleForTherapy(String clinicId, String bookingtype, String filterBy, Nullable`1 dFrom, Nullable`1 dTo, Nullable`1 AdmDate, String gender, List`1 TimeId, List`1 HCategoryName, List`1 PatientConditions, String opdType, String IsExcel, String reportType)
+2024-09-03 11:43:39 [EROR]<47> [HMSDbInterface.DbClinic] LoginId - , ErrorMessage - Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at HMSDbInterface.DbClinic.GetTreatmentScheduleForTherapy(String clinicId, String bookingtype, String filterBy, Nullable`1 dFrom, Nullable`1 dTo, Nullable`1 AdmDate, String gender, List`1 TimeId, List`1 HCategoryName, List`1 PatientConditions, String opdType, String IsExcel, String reportType)
+2024-09-03 11:46:15 [EROR]<35> [HMSDbInterface.DbClinic] LoginId - , ErrorMessage - Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at HMSDbInterface.DbClinic.GetTreatmentScheduleForTherapy(String clinicId, String bookingtype, String filterBy, Nullable`1 dFrom, Nullable`1 dTo, Nullable`1 AdmDate, String gender, List`1 TimeId, List`1 HCategoryName, List`1 PatientConditions, String opdType, String IsExcel, String reportType)
+2024-09-03 11:50:13 [EROR]<41> [HMSDbInterface.DbClinic] LoginId - , ErrorMessage - Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at HMSDbInterface.DbClinic.GetTreatmentScheduleForTherapy(String clinicId, String bookingtype, String filterBy, Nullable`1 dFrom, Nullable`1 dTo, Nullable`1 AdmDate, String gender, List`1 TimeId, List`1 HCategoryName, List`1 PatientConditions, String opdType, String IsExcel, String reportType)
+2024-09-03 11:56:35 [EROR]<62> [HMSDbInterface.DbClinic] LoginId - , ErrorMessage - Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at HMSDbInterface.DbClinic.GetTreatmentScheduleForTherapy(String clinicId, String bookingtype, String filterBy, Nullable`1 dFrom, Nullable`1 dTo, Nullable`1 AdmDate, String gender, List`1 TimeId, List`1 HCategoryName, List`1 PatientConditions, String opdType, String IsExcel, String reportType)
+2024-09-03 11:57:14 [EROR]<11> [HMSDbInterface.DbClinic] LoginId - , ErrorMessage - Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at HMSDbInterface.DbClinic.GetTreatmentScheduleForTherapy(String clinicId, String bookingtype, String filterBy, Nullable`1 dFrom, Nullable`1 dTo, Nullable`1 AdmDate, String gender, List`1 TimeId, List`1 HCategoryName, List`1 PatientConditions, String opdType, String IsExcel, String reportType)
+2024-09-03 12:59:15 [EROR]<55> [HMSDbInterface.DbClinic] LoginId - , ErrorMessage - Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at HMSDbInterface.DbClinic.GetTreatmentScheduleForTherapy(String clinicId, String bookingtype, String filterBy, Nullable`1 dFrom, Nullable`1 dTo, Nullable`1 AdmDate, String gender, List`1 TimeId, List`1 HCategoryName, List`1 PatientConditions, String opdType, String IsExcel, String reportType)
+2024-09-03 15:36:23 [EROR]<27> [HMSDbInterface.DbClinic] LoginId - , ErrorMessage - Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at HMSDbInterface.DbClinic.GetTreatmentScheduleForTherapy(String clinicId, String bookingtype, String filterBy, Nullable`1 dFrom, Nullable`1 dTo, Nullable`1 AdmDate, String gender, List`1 TimeId, List`1 HCategoryName, List`1 PatientConditions, String opdType, String IsExcel, String reportType)
+2024-09-03 18:07:25 [INFO]<1> [] ====================================================================
+
+2024-09-03 18:07:26 [INFO]<1> [] ====================================================================
+2024-09-03 18:07:26 [INFO]<1> [] Application Starts. Version: 1.1.1.1
+2024-09-03 18:07:26 [INFO]<1> [] Application Directory: /usr/share/nginx/ALL/AdminManagement/
+2024-09-03 18:11:19 [EROR]<22> [HMSDbInterface.DbClinic] LoginId - , ErrorMessage - Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at HMSDbInterface.DbClinic.GetTreatmentScheduleForTherapy(String clinicId, String bookingtype, String filterBy, Nullable`1 dFrom, Nullable`1 dTo, Nullable`1 AdmDate, String gender, List`1 TimeId, List`1 HCategoryName, List`1 PatientConditions, String opdType, String IsExcel, String reportType)
+2024-09-03 18:36:08 [EROR]<33> [HMSDbModel.ClsCommon] B-poss Authorization Failed
+2024-09-03 18:36:08 [EROR]<33> [HMSDbModel.ClsCommon] B-poss Authorization Failed
+2024-09-03 18:36:08 [EROR]<33> [HMSDbModel.ClsCommon] B-poss Authorization Failed
+2024-09-03 18:36:09 [EROR]<33> [HMSDbModel.ClsCommon] B-poss Authorization Failed
+2024-09-03 18:36:11 [EROR]<12> [HMSDbModel.ClsCommon] B-poss Authorization Failed
+2024-09-03 18:36:11 [EROR]<11> [HMSDbModel.ClsCommon] B-poss Authorization Failed
+2024-09-03 18:36:12 [EROR]<33> [HMSDbModel.ClsCommon] B-poss Authorization Failed
+2024-09-03 18:36:12 [EROR]<11> [HMSDbModel.ClsCommon] B-poss Authorization Failed
+2024-09-03 18:36:13 [EROR]<33> [HMSDbModel.ClsCommon] B-poss Authorization Failed
+2024-09-03 18:36:13 [EROR]<33> [HMSDbModel.ClsCommon] B-poss Authorization Failed
+2024-09-03 18:36:13 [EROR]<33> [HMSDbModel.ClsCommon] B-poss Authorization Failed
+2024-09-03 18:36:13 [EROR]<33> [HMSDbModel.ClsCommon] B-poss Authorization Failed
+2024-09-03 18:36:13 [EROR]<33> [HMSDbModel.ClsCommon] B-poss Authorization Failed
+2024-09-03 18:36:13 [EROR]<33> [HMSDbModel.ClsCommon] B-poss Authorization Failed
+2024-09-03 18:36:13 [EROR]<30> [HMSDbModel.ClsCommon] B-poss Authorization Failed
+2024-09-03 18:36:13 [EROR]<30> [HMSDbModel.ClsCommon] B-poss Authorization Failed
+2024-09-03 18:36:14 [EROR]<30> [HMSDbModel.ClsCommon] B-poss Authorization Failed
+2024-09-03 18:36:15 [EROR]<12> [HMSDbModel.ClsCommon] B-poss Authorization Failed
+2024-09-03 18:36:18 [EROR]<33> [HMSDbModel.ClsCommon] B-poss Authorization Failed
+2024-09-03 18:36:18 [EROR]<33> [HMSDbModel.ClsCommon] B-poss Authorization Failed
+2024-09-03 18:48:07 [EROR]<24> [HMSDbInterface.DbClinic] LoginId - , ErrorMessage - Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at HMSDbInterface.DbClinic.GetTreatmentScheduleForTherapy(String clinicId, String bookingtype, String filterBy, Nullable`1 dFrom, Nullable`1 dTo, Nullable`1 AdmDate, String gender, List`1 TimeId, List`1 HCategoryName, List`1 PatientConditions, String opdType, String IsExcel, String reportType)

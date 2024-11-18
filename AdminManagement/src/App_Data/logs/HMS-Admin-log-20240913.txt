@@ -1,0 +1,15 @@
+2024-09-13 09:57:34 [EROR]<74> [AdminManagement.Controllers.ReportController] LoginId - 626e21a73a05a6f1169f1f45, ErrorMessage - Nullable object must have a value.
+System.InvalidOperationException: Nullable object must have a value.
+   at System.Nullable`1.get_Value()
+   at HMSDbInterface.DbReportData.GetPatientInitialConsultationReport(String clinicId, Nullable`1 dFrom, Nullable`1 dTo, String ReportType, String selectedStatus, Boolean isExcel)
+   at AdminManagement.Controllers.ReportController.GetPatientInitialConsultationReport(String clinicId, String ReportType, Nullable`1 dFrom, Nullable`1 dTo, String selectedStatus)
+2024-09-13 09:57:47 [EROR]<3> [AdminManagement.Controllers.ReportController] LoginId - 626e21a73a05a6f1169f1f45, ErrorMessage - Nullable object must have a value.
+System.InvalidOperationException: Nullable object must have a value.
+   at System.Nullable`1.get_Value()
+   at HMSDbInterface.DbReportData.GetPatientInitialConsultationReport(String clinicId, Nullable`1 dFrom, Nullable`1 dTo, String ReportType, String selectedStatus, Boolean isExcel)
+   at AdminManagement.Controllers.ReportController.GetPatientInitialConsultationReport(String clinicId, String ReportType, Nullable`1 dFrom, Nullable`1 dTo, String selectedStatus)
+2024-09-13 09:57:53 [EROR]<68> [AdminManagement.Controllers.ReportController] LoginId - 626e21a73a05a6f1169f1f45, ErrorMessage - Nullable object must have a value.
+System.InvalidOperationException: Nullable object must have a value.
+   at System.Nullable`1.get_Value()
+   at HMSDbInterface.DbReportData.GetPatientInitialConsultationReport(String clinicId, Nullable`1 dFrom, Nullable`1 dTo, String ReportType, String selectedStatus, Boolean isExcel)
+   at AdminManagement.Controllers.ReportController.GetPatientInitialConsultationReport(String clinicId, String ReportType, Nullable`1 dFrom, Nullable`1 dTo, String selectedStatus)

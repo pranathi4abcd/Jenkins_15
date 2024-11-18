@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  nginx:
+    image: micronginx
+    ports:
+      - "80:8181"  # Map host port 8181 to container port 8181
+    volumes:
+      - ./nginx-default.conf:/etc/nginx/conf.d/default.conf  # Mount your NGINX config
+    depends_on:
+      - usermanagement  # Ensure user management service starts before NGINX
+
+  usermanagement:
+    image: usermng222nginx   # Replace with your actual user management image
+    ports:
+      - "5004:5004"  # Map host port 5070 to container port 5070
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+      - DOTNET_PRINT_TELEMETRY_MESSAGE=false
+    volumes:
+      - /UserManagement/src:/usr/share/nginx/ALL/UserManagement  # Volume for your user management code
+    command: ["dotnet", "/usr/share/nginx/ALL/UserManagement/UserManagement.dll", "--urls", "http://0.0.0.0:5004"]  # Bind to all interfaces
+

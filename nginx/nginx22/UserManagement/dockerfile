@@ -1,0 +1,19 @@
+# Base image
+FROM mcr.microsoft.com/dotnet/aspnet:7.0 AS base
+
+# Set working directory
+WORKDIR /usr/share/nginx/ALL/UserManagement
+
+# Copy the compiled .NET Core app
+COPY ./src   .
+
+# Expose the port
+EXPOSE 5004
+
+# Set environment variables for production
+ENV ASPNETCORE_ENVIRONMENT=Production
+ENV DOTNET_PRINT_TELEMETRY_MESSAGE=false
+
+# Start the application
+ENTRYPOINT ["dotnet", "UserManagement.dll", "--urls", "http://localhost:5004"]
+

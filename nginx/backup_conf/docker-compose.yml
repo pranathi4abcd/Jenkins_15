@@ -1,0 +1,64 @@
+version: '3.8'
+services:
+  nginx:
+    image: nginxms:v1
+    # build:
+      #  context: .
+        #dockerfile: dockerfile  # Specify the Dockerfile if it's named differently
+    container_name: hmsnginx
+    volumes:
+      #  - ./dist:/usr/share/nginx/html  # Bind mount for live updates (optional)
+      #restart: always  # Automatically restart the container if it stops
+
+
+     # - ./hmsdist/ui.conf:/etc/nginx/conf.d/ui.conf
+     # - ./hmsdist/nginx.conf:/etc/nginx/nginx.conf
+     # - ./dist:/usr/share/nginx/html
+      - ./port8080:/usr/share/nginx/port8080
+    ports:
+      - "8080:80"
+      - "8181:8181"
+    depends_on:
+      - api1-service
+      - api2-service
+      - api3-service
+      - api4-service
+    networks:
+      - my-network
+
+  api1-service:
+    image: admin-management-service
+    container_name: api1-service
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+    networks:
+      - my-network
+
+  api2-service:
+    image: clinicmanagement-service
+    container_name: api2-service
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+    networks:
+      - my-network
+
+  api3-service:
+    image: doctormgmt-service
+    container_name: api3-service
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+    networks:
+      - my-network
+
+  api4-service:
+    image: usermgmt-service
+    container_name: api4-service
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+    networks:
+      - my-network
+
+networks:
+  my-network:
+    driver: bridge
+

@@ -1,0 +1,20 @@
+# Use the official Nginx image from the Docker Hub
+FROM nginx:latest
+
+# Set the maintainer label
+LABEL maintainer="veedhi"
+
+# Copy the frontend static files to the appropriate directory
+# Ensure you have the build directory in your context (dist or port8080 as per your setup)
+COPY dist /usr/share/nginx/html
+COPY port8080 /usr/share/nginx/port8080
+
+# Expose the necessary ports
+#EXPOSE 80
+#EXPOSE 8080
+#EXPOSE 8181
+#Expose 8282
+
+# Start Nginx in the foreground
+CMD ["nginx", "-g", "daemon off;"]
+

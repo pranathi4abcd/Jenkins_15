@@ -1,0 +1,14 @@
+# Use the official MongoDB image as the base image
+FROM mongo:latest
+
+# Copy custom MongoDB configuration file (if you have one)
+# COPY mongo.conf /etc/mongo/mongo.conf
+
+# Create a directory for MongoDB data
+RUN mkdir -p /data/db1
+# Expose MongoDB port
+EXPOSE 27017
+
+# Start MongoDB server
+CMD ["mongod"]
+

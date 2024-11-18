@@ -1,0 +1,4 @@
+2024-09-04 09:27:49 [EROR]<34> [HMSDbInterface.DbClinic] LoginId - , ErrorMessage - Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at HMSDbInterface.DbClinic.GetTreatmentScheduleForTherapy(String clinicId, String bookingtype, String filterBy, Nullable`1 dFrom, Nullable`1 dTo, Nullable`1 AdmDate, String gender, List`1 TimeId, List`1 HCategoryName, List`1 PatientConditions, String opdType, String IsExcel, String reportType)

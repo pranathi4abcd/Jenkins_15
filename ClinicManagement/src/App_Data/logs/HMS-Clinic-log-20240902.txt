@@ -1,0 +1,25 @@
+2024-09-02 11:00:22 [EROR]<91> [ClinicManagement.Controllers.ClinicController] LoginId - , ErrorMessage - Exception has been thrown by the target of an invocation.
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at lambda_method3762(Closure)
+   at InvokeStub_Func`1.Invoke(Object, Object, IntPtr*)
+   at System.Reflection.MethodInvoker.Invoke(Object obj, IntPtr* args, BindingFlags invokeAttr)
+   --- End of inner exception stack trace ---
+   at System.Reflection.MethodInvoker.Invoke(Object obj, IntPtr* args, BindingFlags invokeAttr)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Delegate.DynamicInvokeImpl(Object[] args)
+   at MongoDB.Driver.Linq.Linq3Implementation.Misc.PartialEvaluator.SubtreeEvaluator.Evaluate(Expression expression)
+   at System.Dynamic.Utils.ExpressionVisitorUtils.VisitArguments(ExpressionVisitor visitor, IArgumentProvider nodes)
+   at System.Linq.Expressions.ExpressionVisitor.VisitMethodCall(MethodCallExpression node)
+   at System.Linq.Expressions.ExpressionVisitor.VisitLambda[T](Expression`1 node)
+   at MongoDB.Driver.Linq.Linq3Implementation.LinqProviderAdapterV3.TranslateExpressionToFilter[TDocument](Expression`1 expression, IBsonSerializer`1 documentSerializer, IBsonSerializerRegistry serializerRegistry)
+   at MongoDB.Driver.MongoCollectionImpl`1.CreateFindOperation[TProjection](FilterDefinition`1 filter, FindOptions`2 options)
+   at MongoDB.Driver.MongoCollectionImpl`1.FindAsync[TProjection](IClientSessionHandle session, FilterDefinition`1 filter, FindOptions`2 options, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.UsingImplicitSessionAsync[TResult](Func`2 funcAsync, CancellationToken cancellationToken)
+   at HMSDbInterface.DbExtraItemMaster.AddRazorOrderDetailsWellnessSelectedItem(String slotBookingId, String NetPayble)
+   at ClinicManagement.Controllers.ClinicController.AddRazorOrderDetailsWellnessSelectedItem(String SlotBookingId, String NetPayble)
+2024-09-02 13:07:53 [INFO]<1> [] ====================================================================
+
+2024-09-02 13:07:54 [INFO]<1> [] ====================================================================
+2024-09-02 13:07:54 [INFO]<1> [] Application Starts. Version: 1.0.0.0
+2024-09-02 13:07:54 [INFO]<1> [] Application Directory: /usr/share/nginx/ALL/ClinicManagement/

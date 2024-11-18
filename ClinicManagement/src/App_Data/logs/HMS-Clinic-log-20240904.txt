@@ -1,0 +1,41 @@
+2024-09-04 12:33:17 [EROR]<23> [HMSDbInterface.DbPatientMaster] LoginId - , ErrorMessage - Could not find a part of the path '/usr/share/nginx/ALL/ClinicManagement/img/om-logo.png'.
+System.Net.WebException: Could not find a part of the path '/usr/share/nginx/ALL/ClinicManagement/img/om-logo.png'.
+ ---> System.Net.WebException: Could not find a part of the path '/usr/share/nginx/ALL/ClinicManagement/img/om-logo.png'.
+ ---> System.IO.DirectoryNotFoundException: Could not find a part of the path '/usr/share/nginx/ALL/ClinicManagement/img/om-logo.png'.
+   at Interop.ThrowExceptionForIoErrno(ErrorInfo errorInfo, String path, Boolean isDirError)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String path, OpenFlags flags, Int32 mode, Func`4 createOpenException)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, UnixFileMode openPermissions, Int64& fileLength, UnixFileMode& filePermissions, Func`4 createOpenException)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, Int64 preallocationSize)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, Boolean useAsync)
+   at System.Net.FileWebResponse..ctor(FileWebRequest request, Uri uri, FileAccess access, Boolean useAsync)
+   --- End of inner exception stack trace ---
+   at System.Net.FileWebResponse..ctor(FileWebRequest request, Uri uri, FileAccess access, Boolean useAsync)
+   at System.Net.FileWebRequest.CreateResponse()
+   --- End of inner exception stack trace ---
+   at System.Net.FileWebRequest.CreateResponse()
+   at System.Threading.Tasks.Task`1.InnerInvoke()
+   at System.Threading.ExecutionContext.RunFromThreadPoolDispatchLoop(Thread threadPoolThread, ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunFromThreadPoolDispatchLoop(Thread threadPoolThread, ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.TaskToApm.End[TResult](IAsyncResult asyncResult)
+   at System.Net.FileWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at iTextSharp.text.Image.GetInstance(Uri url, Boolean recoverFromImageError)
+   at iTextSharp.text.Image.GetInstance(Uri url)
+   at iTextSharp.text.Image.GetInstance(String filename)
+   at iTextSharp.text.html.simpleparser.ElementFactory.CreateImage(String src, IDictionary`2 attrs, ChainedProperties chain, IDocListener document, IImageProvider img_provider, Dictionary`2 img_store, String img_baseurl)
+   at iTextSharp.text.html.simpleparser.HTMLWorker.CreateImage(IDictionary`2 attrs)
+   at iTextSharp.text.html.simpleparser.HTMLTagProcessors.HTMLTagProcessor_IMG.StartElement(HTMLWorker worker, String tag, IDictionary`2 attrs)
+   at iTextSharp.text.html.simpleparser.HTMLWorker.StartElement(String tag, IDictionary`2 attrs)
+   at iTextSharp.text.xml.simpleparser.SimpleXMLParser.ProcessTag(Boolean start)
+   at iTextSharp.text.xml.simpleparser.SimpleXMLParser.Go(TextReader reader)
+   at iTextSharp.text.xml.simpleparser.SimpleXMLParser.Parse(ISimpleXMLDocHandler doc, ISimpleXMLDocHandlerComment comment, TextReader r, Boolean html)
+   at iTextSharp.text.html.simpleparser.HTMLWorker.Parse(TextReader reader)
+   at HMSDbInterface.DbPatientMaster.GetBookingVoucherPDF(String slotBookingId)
+2024-09-04 16:38:22 [INFO]<1> [] ====================================================================
+
+2024-09-04 16:38:23 [INFO]<1> [] ====================================================================
+2024-09-04 16:38:23 [INFO]<1> [] Application Starts. Version: 1.0.0.0
+2024-09-04 16:38:23 [INFO]<1> [] Application Directory: /usr/share/nginx/ALL/ClinicManagement/

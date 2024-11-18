@@ -1,0 +1,128 @@
+# nginx.conf
+
+user nginx;
+worker_processes auto;
+pid /run/nginx.pid;
+
+events {
+    worker_connections 1024;
+}
+
+http {
+    include /etc/nginx/mime.types;
+    default_type application/octet-stream;
+    sendfile on;
+    keepalive_timeout 65;
+    include /etc/nginx/conf.d/*.conf;
+
+    # Add Docker's internal DNS resolver to resolve container names
+    resolver 127.0.0.11 valid=30s;
+
+    # Define upstreams for backend services
+    upstream admin-management-service {
+        server admin-management-service:80;
+    }
+
+    upstream clinic-management-service {
+        server clinic-management-service:80;
+    }
+
+    upstream doctor-management-service {
+        server doctor-management-service:80;
+    }
+
+    upstream user-management-service {
+        server user-management-service:80;
+    }
+
+    # Server block for port 80
+    server {
+        listen 80;
+        server_name your-domain.com;  # Replace with your actual domain
+
+        # Serve frontend static files
+        location / {
+            root /usr/share/nginx/html/dist;
+            try_files $uri /index.html;
+        }
+
+        # Proxy API requests to respective services
+        location /admin-management/ {
+            proxy_pass http://admin-management-service;
+            proxy_set_header Host $host;
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+            proxy_set_header X-Forwarded-Proto $scheme;
+        }
+
+        location /clinic-management/ {
+            proxy_pass http://clinic-management-service;
+            proxy_set_header Host $host;
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+            proxy_set_header X-Forwarded-Proto $scheme;
+        }
+
+        location /doctor-management/ {
+            proxy_pass http://doctor-management-service;
+            proxy_set_header Host $host;
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+            proxy_set_header X-Forwarded-Proto $scheme;
+        }
+
+        location /user-management/ {
+            proxy_pass http://user-management-service;
+            proxy_set_header Host $host;
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+            proxy_set_header X-Forwarded-Proto $scheme;
+        }
+    }
+
+    # Server block for port 8080
+    server {
+        listen 8080;
+        server_name your-domain.com;  # Replace with your actual domain
+
+        # Serve frontend static files
+        location / {
+            root /usr/share/nginx/port8080;
+            try_files $uri /index.html;
+        }
+
+        # Proxy API requests to respective services
+        location /admin-management/ {
+            proxy_pass http://admin-management-service;
+            proxy_set_header Host $host;
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+            proxy_set_header X-Forwarded-Proto $scheme;
+        }
+
+        location /clinic-management/ {
+            proxy_pass http://clinic-management-service;
+            proxy_set_header Host $host;
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+            proxy_set_header X-Forwarded-Proto $scheme;
+        }
+
+        location /doctor-management/ {
+            proxy_pass http://doctor-management-service;
+            proxy_set_header Host $host;
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+            proxy_set_header X-Forwarded-Proto $scheme;
+        }
+
+        location /user-management/ {
+            proxy_pass http://user-management-service;
+            proxy_set_header Host $host;
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+            proxy_set_header X-Forwarded-Proto $scheme;
+        }
+    }
+}
+

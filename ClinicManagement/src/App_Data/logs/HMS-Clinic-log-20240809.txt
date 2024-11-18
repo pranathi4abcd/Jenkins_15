@@ -1,0 +1,71 @@
+2024-08-09 12:47:38 [EROR]<59> [HMSDbInterface.BpossCommonFunction] LoginId - , ErrorMessage - Exception has been thrown by the target of an invocation.
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at lambda_method2558(Closure)
+   at InvokeStub_Func`1.Invoke(Object, Object, IntPtr*)
+   at System.Reflection.MethodInvoker.Invoke(Object obj, IntPtr* args, BindingFlags invokeAttr)
+   --- End of inner exception stack trace ---
+   at System.Reflection.MethodInvoker.Invoke(Object obj, IntPtr* args, BindingFlags invokeAttr)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Delegate.DynamicInvokeImpl(Object[] args)
+   at MongoDB.Driver.Linq.Linq3Implementation.Misc.PartialEvaluator.SubtreeEvaluator.Evaluate(Expression expression)
+   at System.Dynamic.Utils.ExpressionVisitorUtils.VisitArguments(ExpressionVisitor visitor, IArgumentProvider nodes)
+   at System.Linq.Expressions.ExpressionVisitor.VisitMethodCall(MethodCallExpression node)
+   at System.Linq.Expressions.ExpressionVisitor.VisitLambda[T](Expression`1 node)
+   at System.Linq.Expressions.ExpressionVisitor.VisitUnary(UnaryExpression node)
+   at System.Dynamic.Utils.ExpressionVisitorUtils.VisitArguments(ExpressionVisitor visitor, IArgumentProvider nodes)
+   at System.Linq.Expressions.ExpressionVisitor.VisitMethodCall(MethodCallExpression node)
+   at System.Dynamic.Utils.ExpressionVisitorUtils.VisitArguments(ExpressionVisitor visitor, IArgumentProvider nodes)
+   at System.Linq.Expressions.ExpressionVisitor.VisitMethodCall(MethodCallExpression node)
+   at MongoDB.Driver.Linq.Linq3Implementation.Translators.ExpressionToExecutableQueryTranslators.ExpressionToExecutableQueryTranslator.TranslateScalar[TDocument,TResult](MongoQueryProvider`1 provider, Expression expression)
+   at MongoDB.Driver.Linq.Linq3Implementation.MongoQueryProvider`1.Execute[TResult](Expression expression)
+   at HMSDbInterface.BpossCommonFunction.SetUserInBPOS(String refrer, RegistrationMainModel requestDto, Boolean isVisitor)
+2024-08-09 12:48:01 [EROR]<71> [HMSDbInterface.BpossCommonFunction] LoginId - , ErrorMessage - Exception has been thrown by the target of an invocation.
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at lambda_method2684(Closure)
+   at InvokeStub_Func`1.Invoke(Object, Object, IntPtr*)
+   at System.Reflection.MethodInvoker.Invoke(Object obj, IntPtr* args, BindingFlags invokeAttr)
+   --- End of inner exception stack trace ---
+   at System.Reflection.MethodInvoker.Invoke(Object obj, IntPtr* args, BindingFlags invokeAttr)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Delegate.DynamicInvokeImpl(Object[] args)
+   at MongoDB.Driver.Linq.Linq3Implementation.Misc.PartialEvaluator.SubtreeEvaluator.Evaluate(Expression expression)
+   at System.Dynamic.Utils.ExpressionVisitorUtils.VisitArguments(ExpressionVisitor visitor, IArgumentProvider nodes)
+   at System.Linq.Expressions.ExpressionVisitor.VisitMethodCall(MethodCallExpression node)
+   at System.Linq.Expressions.ExpressionVisitor.VisitLambda[T](Expression`1 node)
+   at System.Linq.Expressions.ExpressionVisitor.VisitUnary(UnaryExpression node)
+   at System.Dynamic.Utils.ExpressionVisitorUtils.VisitArguments(ExpressionVisitor visitor, IArgumentProvider nodes)
+   at System.Linq.Expressions.ExpressionVisitor.VisitMethodCall(MethodCallExpression node)
+   at System.Dynamic.Utils.ExpressionVisitorUtils.VisitArguments(ExpressionVisitor visitor, IArgumentProvider nodes)
+   at System.Linq.Expressions.ExpressionVisitor.VisitMethodCall(MethodCallExpression node)
+   at MongoDB.Driver.Linq.Linq3Implementation.Translators.ExpressionToExecutableQueryTranslators.ExpressionToExecutableQueryTranslator.TranslateScalar[TDocument,TResult](MongoQueryProvider`1 provider, Expression expression)
+   at MongoDB.Driver.Linq.Linq3Implementation.MongoQueryProvider`1.Execute[TResult](Expression expression)
+   at HMSDbInterface.BpossCommonFunction.SetUserInBPOS(String refrer, RegistrationMainModel requestDto, Boolean isVisitor)
+2024-08-09 12:49:04 [EROR]<113> [HMSDbInterface.BpossCommonFunction] LoginId - , ErrorMessage - Exception has been thrown by the target of an invocation.
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at lambda_method2723(Closure)
+   at InvokeStub_Func`1.Invoke(Object, Object, IntPtr*)
+   at System.Reflection.MethodInvoker.Invoke(Object obj, IntPtr* args, BindingFlags invokeAttr)
+   --- End of inner exception stack trace ---
+   at System.Reflection.MethodInvoker.Invoke(Object obj, IntPtr* args, BindingFlags invokeAttr)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Delegate.DynamicInvokeImpl(Object[] args)
+   at MongoDB.Driver.Linq.Linq3Implementation.Misc.PartialEvaluator.SubtreeEvaluator.Evaluate(Expression expression)
+   at System.Dynamic.Utils.ExpressionVisitorUtils.VisitArguments(ExpressionVisitor visitor, IArgumentProvider nodes)
+   at System.Linq.Expressions.ExpressionVisitor.VisitMethodCall(MethodCallExpression node)
+   at System.Linq.Expressions.ExpressionVisitor.VisitLambda[T](Expression`1 node)
+   at System.Linq.Expressions.ExpressionVisitor.VisitUnary(UnaryExpression node)
+   at System.Dynamic.Utils.ExpressionVisitorUtils.VisitArguments(ExpressionVisitor visitor, IArgumentProvider nodes)
+   at System.Linq.Expressions.ExpressionVisitor.VisitMethodCall(MethodCallExpression node)
+   at System.Dynamic.Utils.ExpressionVisitorUtils.VisitArguments(ExpressionVisitor visitor, IArgumentProvider nodes)
+   at System.Linq.Expressions.ExpressionVisitor.VisitMethodCall(MethodCallExpression node)
+   at MongoDB.Driver.Linq.Linq3Implementation.Translators.ExpressionToExecutableQueryTranslators.ExpressionToExecutableQueryTranslator.TranslateScalar[TDocument,TResult](MongoQueryProvider`1 provider, Expression expression)
+   at MongoDB.Driver.Linq.Linq3Implementation.MongoQueryProvider`1.Execute[TResult](Expression expression)
+   at HMSDbInterface.BpossCommonFunction.SetUserInBPOS(String refrer, RegistrationMainModel requestDto, Boolean isVisitor)
+2024-08-09 17:28:56 [INFO]<1> [] ====================================================================
+
+2024-08-09 17:28:57 [INFO]<1> [] ====================================================================
+2024-08-09 17:28:57 [INFO]<1> [] Application Starts. Version: 1.0.0.0
+2024-08-09 17:28:57 [INFO]<1> [] Application Directory: /usr/share/nginx/ALL/ClinicManagement/

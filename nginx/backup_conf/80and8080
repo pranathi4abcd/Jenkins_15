@@ -1,0 +1,68 @@
+version: '3.8'
+ 
+services:
+  nginx:
+    image: nginxms:v1
+    container_name: hmsnginx
+    ports:
+      - "8080:80"  # Expose Nginx on port 8080
+      - "6001:80"  # Expose Nginx on port 6001
+    configs:
+      - source: nginx-config  # Use the embedded config defined below
+        target: /etc/nginx/conf.d/default.conf  # Target location inside the container
+    depends_on:
+      - api1-service
+      - api2-service
+      - api3-service
+      - api4-service
+    networks:
+      - my-network
+ 
+  api1-service:
+    image: admin-management-service
+    container_name: api1-service
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+    networks:
+      - my-network
+    expose:
+      - "80"  # Exposing internal port 80 to the Docker network
+ 
+  api2-service:
+    image: clinicmanagement-service
+    container_name: api2-service
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+    networks:
+      - my-network
+    expose:
+      - "80"  # Exposing internal port 80 to the Docker network
+ 
+  api3-service:
+    image: doctormgmt-service
+    container_name: api3-service
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+    networks:
+      - my-network
+    expose:
+      - "80"  # Exposing internal port 80 to the Docker network
+ 
+  api4-service:
+    image: usermgmt-service
+    container_name: api4-service
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+    networks:
+      - my-network
+    expose:
+      - "80"  # Exposing internal port 80 to the Docker network
+ 
+networks:
+  my-network:
+    driver: bridge
+ 
+configs:
+  nginx-config:
+    file: ./nginx-default.conf  # Define the Nginx configuration here or inline as YAML
+

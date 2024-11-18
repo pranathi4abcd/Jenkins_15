@@ -1,0 +1,13 @@
+2024-10-16 11:24:19 [EROR]<32> [HMSDbInterface.DbDoctor] LoginId - , ErrorMessage - Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at HMSDbInterface.DbDoctor.AlotDoctorManually(List`1 obj, String SlotBookingId, String AllotedBy, String DoctorIdToken, String CurrentToken)
+2024-10-16 15:51:23 [INFO]<1> [] ====================================================================
+
+2024-10-16 15:51:23 [INFO]<1> [] ====================================================================
+2024-10-16 15:51:23 [INFO]<1> [] Application Starts. Version: 1.0.0.0
+2024-10-16 15:51:23 [INFO]<1> [] Application Directory: /usr/share/nginx/ALL/UserManagement/
+2024-10-16 18:30:31 [INFO]<1> [] ====================================================================
+
+2024-10-16 18:30:32 [INFO]<1> [] ====================================================================
+2024-10-16 18:30:32 [INFO]<1> [] Application Starts. Version: 1.0.0.0
+2024-10-16 18:30:32 [INFO]<1> [] Application Directory: /usr/share/nginx/ALL/UserManagement/

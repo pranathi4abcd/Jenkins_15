@@ -1,0 +1,5 @@
+2024-09-11 13:21:34 [EROR]<3> [AdminManagement.Controllers.ReportController] LoginId - 61d93a94753ea6e76a514a86, ErrorMessage - Nullable object must have a value.
+System.InvalidOperationException: Nullable object must have a value.
+   at System.Nullable`1.get_Value()
+   at HMSDbInterface.DbReportData.GetPatientInitialConsultationReport(String clinicId, Nullable`1 dFrom, Nullable`1 dTo, String ReportType, String selectedStatus, Boolean isExcel)
+   at AdminManagement.Controllers.ReportController.GetPatientInitialConsultationReport(String clinicId, String ReportType, Nullable`1 dFrom, Nullable`1 dTo, String selectedStatus)
